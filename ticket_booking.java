@@ -6,9 +6,8 @@ Depending on users input, decrement the number of seats in corresponding categor
  */
 //Name:Shreevatsa
 //Reg Number:200970093
-package JavaExamples;
+package javaprogramming;
 
-import java.awt.Label;
 import java.util.Scanner;
 
 class multiplex{
