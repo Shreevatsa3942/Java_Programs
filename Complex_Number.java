@@ -51,11 +51,11 @@ public class Complex_Number {
         System.out.print("\n Num1 : ");int c1=sc.nextInt();
         System.out.print("\n Num2 : ");int c2= sc.nextInt();
         ADD_NUM obj2=new ADD_COMPLEX(c1,c2);
+        System.out.println("Complex Number 1: "+(r1+" + i"+c1));
+        System.out.println("Complex Number 2: "+(r2+" + i"+c2));
+        int result1= obj1.Add();
+        int  result2=obj2.Add();
+        System.out.println("\nSum of Two Complex Numbers : "+(result1+" + i"+result2));
 
-        int result= obj1.Add();
-        System.out.println("\nSum of two Real Number: "+result);
-
-        result=obj2.Add();
-        System.out.println("\nSum of two Imaginary Number: "+result);
     }
 }
