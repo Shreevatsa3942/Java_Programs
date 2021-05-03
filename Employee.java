@@ -12,7 +12,6 @@ where HRA is 7.5% of basic, IT = Rs.200, PF = 12% of basic.
 
 package javaprogramming;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Employee {
