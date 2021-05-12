@@ -1,3 +1,8 @@
+/*Program:Java program to convert the input speed from kilometre per hour to meters per
+second and vice versa.*/
+//Name:Shreevatsa
+//Date Modified:08-05-2021
+//Reg No:200970093
 package Java_LAB.Week1;
 
 import java.util.Scanner;

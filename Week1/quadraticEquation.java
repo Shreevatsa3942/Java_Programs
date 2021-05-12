@@ -1,4 +1,4 @@
-/*Program:Calculate Body Mass Index*/
+/*Program:Quadratic Equation*/
 //Name:Shreevatsa
 //Date Modified:08-05-2021
 //Reg No:200970093
