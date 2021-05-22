@@ -5,14 +5,13 @@ Total bill amount Discount
             500-1000 10%
             1000-2000 12%
             Above 2000 15%
-Create a class called Shop with data members for storing item id, item name, quantity, unit 
+Create a class called Shop with data members for storing item id, item name, quantity, unit
 price and total bill amount. Implement the above using a menu-driven program.
 */
 
 //Name:Shreevatsa
 //Date Modified:08-04-2021
 //Reg No:200970093
-package javaprogramming;
 
 import java.util.Scanner;
 
@@ -20,16 +19,16 @@ class shop{
     String item_id,item_name;
     int qty;
     double unit_price,bill=0,discount=0;
-    
+
     //parameterized constructor
     public shop(String id, String it_name, int it_qty, double price){
-        
+
         item_id=id;
         item_name=it_name;
         qty=it_qty;
         unit_price=price;
     }
-    
+
     public double bill_calculate(){
         bill=qty*unit_price;
         if(bill<500)
@@ -40,19 +39,21 @@ class shop{
             discount=bill*0.12;
         else if(bill > 2000)
             discount=bill*0.15;
-        
+
         bill=bill-discount;
         return bill;
-        
+
     }
 }
+
+
 public class CustomerBill {
     String cname;
     int n;
     double total_bill=0;
-    
-    
-    //creating a method input() to insertion 
+
+
+    //creating a method input() to insertion
     public void input(){
       Scanner sc=new Scanner(System.in);
       System.out.print("Enter the name of the customer : ");
@@ -75,12 +76,12 @@ public class CustomerBill {
             unit_price=sc.nextDouble();
             s[i]=new shop(id,itname,qty,unit_price);
             total_bill+=s[i].bill_calculate();
-        
+
         }
         display(s);
     }
     public void display(shop s[]){
-        
+
         System.out.println("-------------Bill--------------");
         System.out.println("\nItem_ID\tItem_name\tItem_qty\tUnit_Price\tBill");
         System.out.println("-------\t---------\t--------\t----------\t-----");
@@ -90,9 +91,9 @@ public class CustomerBill {
         System.out.println("------------------------------");
         System.out.println("Total Bill: "+total_bill);
     }
-    //main method 
+    //main method
     public static void main(String args[]){
-        
+
         CustomerBill cust=new CustomerBill();
         cust.input();
    }
