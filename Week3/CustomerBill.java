@@ -76,7 +76,6 @@ public class CustomerBill {
             unit_price=sc.nextDouble();
             s[i]=new shop(id,itname,qty,unit_price);
             total_bill+=s[i].bill_calculate();
-
         }
         display(s);
     }
@@ -91,6 +90,8 @@ public class CustomerBill {
         System.out.println("------------------------------");
         System.out.println("Total Bill: "+total_bill);
     }
+
+
     //main method
     public static void main(String args[]){
 
