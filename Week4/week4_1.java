@@ -32,7 +32,7 @@ class Customer{
 	}
 	public void Calculate_bill_amt(){
 		if(no_of_calls <= 100){
-			bill_amt=no_of_calls*1;
+			bill_amt=100;
 		}
 		else if(no_of_calls <= 150){
 			bill_amt=100;
@@ -41,19 +41,16 @@ class Customer{
 		}
 		else if(no_of_calls <= 200){
 			bill_amt=100;
-			int rem_calls=no_of_calls-100;
-			bill_amt+=((rem_calls-50)*0.60);
-			rem_calls-=50;
+			bill_amt+=(50*0.60);
+			int rem_calls=no_of_calls-150;
 			bill_amt+=(rem_calls*0.50);
 
 		}
 		else{
 			bill_amt=100;
-			int rem_calls=no_of_calls-100;
-			bill_amt+=((rem_calls-50)*0.60);
-			rem_calls-=50;
-			bill_amt+=((rem_calls-50)*0.50);
-			rem_calls-=50;
+			bill_amt+=(50*0.60);
+			bill_amt+=(50*0.50);
+			int rem_calls=no_of_calls-200;
 			bill_amt+=(rem_calls*0.40);
 		}
 	}

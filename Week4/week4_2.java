@@ -1,16 +1,12 @@
 /*
-A telephone company contains the records of all customer payment details of
-a “Customer” like customer_id, name, phone number, Bill number,
-Number of calls and bill amount.
-The monthly telephone bills are calculated as per the following criteria:
-Minimum Rs. 100 for the first 100 calls.
-+ Rs. 0.60 per call for next 50 calls.
-+ Rs. 0.50 per call for next 50 calls.
-+ Rs. 0.40 per call for any call beyond 200 calls.
-Create an array of objects to process the details of ‘n’ customers.
-Use appropriate
-constructors, and member functions to accept and display details of a customer.
-Create a function Calculate_bill_amt() to calculate bill amount
+Consider a class called Points with x-coordinate and y-coordinate as its data members.
+Create three objects P1, P2 and P3, which represent three points in a plane.
+• Calculate and the distance between P1 and P2 (by passing the coordinates of one point
+as arguments).
+• Calculate and the distance between P1 and P3 (by passing one point itself as argument).
+Note: The distance between two points P(x1, y1) and Q(x2, y2) is calculated as:
+??(??,??) = v(??2 - ??1)^2+ (??2 - ??1)^2\
+
 */
 //Name:Shreevatsa
 //Reg No:200970093
@@ -26,6 +22,12 @@ class Points{
 		x=sc.nextInt();
 		y=sc.nextInt();
 	}
+	public int getX(){
+		return x;
+	}
+	public int getY(){
+		return y;
+	}
 	public void display(int j){
 		System.out.print("\n P"+j+" = ( "+x+", "+y+" )");
 	}
@@ -36,6 +38,14 @@ class Points{
 		double expr=((p2.x - this.x)*(p2.x - this.x))+((p2.y - this.y)*(p2.y - this.y));
 		double d=Math.sqrt(expr);
 		return d;
+	}
+	public double distance(int x2,int y2){
+
+			System.out.print("\nX1 : "+this.x+" X2: "+x2);
+			System.out.print("\nY1 : "+this.y+" Y2: "+y2);
+			double expr=((x2 - this.x)*(x2 - this.x))+((y2 - this.y)*(y2 - this.y));
+			double d=Math.sqrt(expr);
+			return d;
 	}
 
 }
@@ -57,7 +67,10 @@ class week4_2{
 		p3.display(3);
 
 		double result;
-		result=p1.distance(p2);
+
+		int x=p2.getX();
+		int y=p2.getY();
+		result=p1.distance(x,y);
 		System.out.println("\nDistance between p1 and p2 = "+result);
 		result=p1.distance(p3);
 		System.out.println("\nDistance between p1 and p3 = "+result);

@@ -6,19 +6,20 @@ push and pop operations
 import java.util.Scanner;
 class stack{
 	private static int arr[];
-	private static int top;
+	private static int top,size;
 
 	public stack(int size){
+		this.size=size;
 		arr = new int[size];
 		top=-1;
 	}
 
 	public static void push(int var){
-		top++;
-		if(top == 10)
+
+		if(top >= size-1)
 			System.out.print("\nStack is full");
 		else{
-
+			top++;
 			arr[top]=var;
 			System.out.print("\nElement " +var+" pushed to the stack");
 		}
