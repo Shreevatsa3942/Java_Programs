@@ -1,8 +1,8 @@
 /*
-Create three classes as per the following specifications: 
-• Student: Data members are Register Number, Name, Course and Semester. 
-• Exam (derived from class Student): Data members are the marks scored in three subjects. 
-• Result (derived from class Exam): Data members are Total Marks and Grade. 
+Create three classes as per the following specifications:
+• Student: Data members are Register Number, Name, Course and Semester.
+• Exam (derived from class Student): Data members are the marks scored in three subjects.
+• Result (derived from class Exam): Data members are Total Marks and Grade.
 Implement get_data() and display() methods using the concept of method overriding
 */
 //Name:Shreevatsa
@@ -36,7 +36,7 @@ class Student{
     }
     public void display(){
         scount++;
-        
+
         System.out.println("\n-----Details of Student: "+scount+" -----");
         System.out.println("Registration Number: "+regno);
         System.out.println("Student Name: "+name);
@@ -46,16 +46,16 @@ class Student{
 }
 class Exam extends Student{
     protected int sub1,sub2,sub3;
-    
+
     public Exam(){
         super();
         sub1=sub2=sub3=0;
     }
     @Override
     public void get_data(){
-        
+
         super.get_data();
-        
+
         Scanner sc=new Scanner(System.in);
         System.out.println("\n---Enter Student Marks Details----");
         System.out.print("\nSubject1:");
@@ -64,7 +64,7 @@ class Exam extends Student{
         sub2=sc.nextInt();
         System.out.print("\nSubject3:");
         sub3=sc.nextInt();
-        
+
     }
     @Override
     public void display(){
@@ -72,7 +72,7 @@ class Exam extends Student{
         System.out.println("Subject 1: "+sub1);
         System.out.println("Subject 2: "+sub2);
         System.out.println("Subject 3: "+sub3);
-        
+
     }
 }
 class Result extends Exam{
@@ -95,26 +95,27 @@ class Result extends Exam{
         super.display();
         System.out.println("Total: "+total);
         System.out.println("Grade: "+grade);
-        
+
     }
-        
+
 }
 public class week6_1 {
     public static void main(String[] args) {
-        
+
         Scanner sc=new Scanner(System.in);
-//        System.out.println("\nEnter the number of students: ");
-//        int n=sc.nextInt();
-        
-        Result res=new Result();
-        res.get_data();
-        res.display();
-//        Result[] r=new Result[n];
-//        for(int i=0;i<n;i++){
-//            r[i].get_data();
-//        }
-//        for(int i=0;i<n;i++){
-//            r[i].display();
-//        }
+        System.out.println("\nEnter the number of students: ");
+        int n=sc.nextInt();
+
+        //Result res=new Result();
+        //res.get_data();
+        //res.display();
+        Result[] r=new Result[n];
+        for(int i=0;i<n;i++){
+			r[i]=new Result();
+            r[i].get_data();
+        }
+        for(int i=0;i<n;i++){
+            r[i].display();
+        }
     }
 }
