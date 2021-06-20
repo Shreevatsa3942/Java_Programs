@@ -3,9 +3,6 @@ Create a class called Employee with data members: name, id, designation, salary.
 appropriate constructors and methods for initializing the object. Implement Cloneable
 interface to create a copy of the Employee object
  */
-//Name:Shreevatsa
-//Regno:200970093
-//Date:12-06-2021
 package Java_LAB.Week6;
 
 import java.util.Scanner;

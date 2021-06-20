@@ -15,7 +15,8 @@ import java.util.Scanner;
 
 abstract class Figure{
     protected int dim1,dim2;
-    public abstract void area(); 
+    public abstract void area();
+    public abstract void display();
 }
 class Triangle extends Figure{
     private double result;
@@ -66,29 +67,27 @@ class Rectangle extends Figure{
 public class week6_2 {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        //area of a triangle 
+        //area of a triangle
         System.out.println("Enter base and height of a triangle : ");
         System.out.println("Base: ");
         int base =sc.nextInt();
         System.out.println("\nHeight");
         int height=sc.nextInt();
-        Triangle t=new Triangle(base,height);
-        
+        Figure t=new Triangle(base,height);
+
         System.out.println("Enter the value for a side of a square: ");
         System.out.println("Side: ");
         int side=sc.nextInt();
-        Square sq=new Square(side);
-        
+        Figure sq=new Square(side);
+
         System.out.println("Enter length and width of a Rectangle: ");
         System.out.println("Length: ");
         int length=sc.nextInt();
         System.out.println("\nWidth: ");
         int width=sc.nextInt();
-        Rectangle rect=new Rectangle(length,width);
-        
-        
-        t.display();
-        sq.display();
+        Figure rect=new Rectangle(length,width);
+		t.display();
+		sq.display();
         rect.display();
     }
 }
